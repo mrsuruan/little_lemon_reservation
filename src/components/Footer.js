@@ -114,9 +114,10 @@ function Footer() {
                         
                     </VStack>
 
-
                 </HStack>
-                © 2023 Little Lemon Restaurant, LLC. All Rights Reserved | Accessibility | Privacy Policy
+                <p>
+                    © 2023 Little Lemon Restaurant, LLC. All Rights Reserved | Accessibility | Privacy Policy
+                </p>
             </Box>
         </footer>
     );
