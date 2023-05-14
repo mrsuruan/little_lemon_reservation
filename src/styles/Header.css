@@ -1,0 +1,89 @@
+/* Header.css */
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+.header {
+    background-color: #EDEFEE;
+}
+
+.navbar {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.logo:active {
+    opacity: 0.4;
+}
+
+/* .logo:focus {
+    background-color: pink;
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0 20px;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #333333;
+    text-decoration: none;
+    font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-links a:active {
+    opacity: 0.4;
+}
+
+/* .nav-links a:focus {
+    background-color: pink;
+} */
+
+.reserve-btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    background-color: #F4CE14;
+    color: #333333;
+    font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.reserve-btn:hover {
+    background-color: #DDBB16;
+}
+
+.reserve-btn:active {
+    background-color: #DDBB16;
+    color: #FFFFFF;
+}
+
+/* .reserve-btn:focus {
+    background-color: #DDBB16;
+} */
