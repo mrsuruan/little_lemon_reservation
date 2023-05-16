@@ -1,0 +1,95 @@
+/* Footer.css */
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+.footer-background {
+    background-color: #495E57;
+}
+
+.footer {
+    background-color: #495E57;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #EDEFEE;
+    line-height: 1.5;
+}
+
+.footer-logo {
+    margin-top: 5px;
+}
+
+.footer-logo:hover {
+    opacity: 0.7;
+}
+
+.footer-logo:active {
+    opacity: 0.4;
+}
+
+.footer-header {
+    color: #F4CE14;
+    margin-bottom: 5px;
+}
+
+.footer-nav-links {
+    list-style: none;
+}
+
+.footer-nav-links a {
+    color: #EDEFEE;
+}
+
+.footer-nav-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-nav-links a:active {
+    opacity: 0.4;
+}
+
+.footer-contact a {
+    color: #EDEFEE;
+}
+
+.footer-contact a:hover {
+    opacity: 0.7;
+}
+
+.footer-contact a:active {
+    opacity: 0.4;
+}
+
+.footer-social-icons:hover {
+    opacity: 0.7;
+}
+
+.footer-social-icons:active {
+    opacity: 0.4;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+}
+
+.footer-copyright a {
+    color: #EDEFEE;
+    letter-spacing: 2px;
+}
+
+.footer-copyright a:hover {
+    opacity: 0.7;
+}
+
+.footer-copyright a:active {
+    opacity: 0.4;
+}
+
+.footer-separator {
+    padding: 0 10px;
+}
+

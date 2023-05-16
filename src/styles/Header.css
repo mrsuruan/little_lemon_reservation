@@ -5,12 +5,17 @@
     padding:0;
 }
 
-.header {
+.header-background {
     background-color: #EDEFEE;
 }
 
-.navbar {
+.header {
+    background-color: #EDEFEE;
     max-width: 1280px;
+    margin: 0 auto;
+}
+
+.navbar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
