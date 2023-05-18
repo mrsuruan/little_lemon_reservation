@@ -5,12 +5,13 @@
     padding:0;
 }
 
-.footer-background {
+.footer-container {
     background-color: #495E57;
 }
-
 .footer {
-    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     max-width: 1280px;
     margin: 0 auto;
     font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
@@ -34,7 +35,12 @@
 
 .footer-header {
     color: #F4CE14;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.footer-header-sitemap {
+    color: #F4CE14;
+    margin-bottom: -8px;
 }
 
 .footer-nav-links {
@@ -55,6 +61,11 @@
 
 .footer-address {
     font-style: normal;
+    margin-bottom: 10px;
+}
+
+.footer-contact {
+    margin-bottom: 10px;
 }
 
 .footer-contact a {
@@ -78,6 +89,7 @@
 }
 
 .footer-copyright {
+    color: #EDEFEE;
     font-size: 0.85rem;
 }
 
@@ -95,6 +107,6 @@
 }
 
 .footer-separator {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 

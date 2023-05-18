@@ -36,27 +36,23 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="">
-            <Box className="footer-container">
+        <footer>
+            <Box className="footer-background">
                 <Box pt ="20" pb="20" className="footer">
-                    <div>
-                        <HStack>
-                            <Box className="footer-logo">
-                                <a href="/" title="Little Lemon Restaurant">
-                                    <img
-                                        src={logo_2}
-                                        style={{width: "50px"}}
-                                        title="Little Lemon Restaurant"
-                                        alt="Little Lemon footer logo"
-                                    />
-                                </a>
-                            </Box>
-                        </HStack>
-                    </div>
-                    <div>
+                    <HStack px={30} justifyContent="space-between" alignItems="top" >
+                        <Box className="footer-logo">
+                            <a href="/" title="Little Lemon Restaurant">
+                                <img
+                                    src={logo_2}
+                                    style={{width: "50px"}}
+                                    title="Little Lemon Restaurant"
+                                    alt="Little Lemon footer logo"
+                                />
+                            </a>
+                        </Box>
                         <nav>
                             <VStack alignItems="left">
-                                <h4 className="footer-header-sitemap">Sitemap</h4>
+                                <h4 className="footer-header">Sitemap</h4>
                                 <ul className="footer-nav-links">
                                     <li>
                                         <a href="/" title="home page">
@@ -91,11 +87,9 @@ const Footer = () => {
                                 </ul>
                             </VStack>
                         </nav>
-                    </div>
-                    <div>
                         <Box>
                             <VStack align="left">
-                                <address className="footer-address">
+                                <address marginBottom="10px" className="footer-address">
                                     <h4 className="footer-header">
                                         Location
                                     </h4>
@@ -125,53 +119,51 @@ const Footer = () => {
                                 </section>
                             </VStack>
                         </Box>
-                        </div>
-                        <div>
-                            <Box>
-                                <VStack align="left" >
-                                    <section className="footer-contact">
-                                        <h4 className="footer-header">
-                                            Contact
-                                        </h4>
-                                        <Box>
-                                            <a href="mailto:eat@littlelemon.com">
-                                                <p>eat@littlelemon.com</p>
+                        <Box>
+                            <VStack align="left" >
+                                <section marginBottom="10px">
+                                    <h4 className="footer-header">
+                                        Contact
+                                    </h4>
+                                    <Box className="footer-contact">
+                                        <a href="mailto:eat@littlelemon.com">
+                                            <p>eat@littlelemon.com</p>
+                                        </a>
+                                        <a href="tel:3124920808">
+                                            <p>(312)492-0808</p>
+                                        </a>
+                                    </Box>
+                                </section>
+                                <section>
+                                    <h4 className="footer-header">
+                                        Follow us
+                                    </h4>
+                                    <HStack spacing="15px">
+                                        {socials.map(({ icon, url }) => (
+                                            <a
+                                            key={url}
+                                            href={url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="footer-social-icons"
+                                            >
+                                                <FontAwesomeIcon icon={icon} size="1.5x" key={url} color="#EDEFEE" />
                                             </a>
-                                            <a href="tel:3124920808">
-                                                <p>(312)492-0808</p>
-                                            </a>
-                                        </Box>
-                                    </section>
-                                    <section>
-                                        <h4 className="footer-header">
-                                            Follow us
-                                        </h4>
-                                        <HStack spacing="15px">
-                                            {socials.map(({ icon, url }) => (
-                                                <a
-                                                key={url}
-                                                href={url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="footer-social-icons"
-                                                >
-                                                    <FontAwesomeIcon icon={icon} size="1.5x" key={url} color="#EDEFEE" />
-                                                </a>
-                                            ))}
-                                        </HStack>
-                                    </section>
-                                </VStack>
-                            </Box>
-                        </div>
-                </Box>
-                <Box className="footer-copyright" textAlign="center" pt="20px" pb="20px">
-                    <p>
-                        © 2023 Little Lemon Restaurant, LLC. All Rights Reserved
-                        <span class="footer-separator">|</span>
-                        <a href="/accessibility" title="our commitment to website accessibility">Accessibility</a>
-                        <span class="footer-separator">|</span>
-                        <a href="privacy-policy" title="our privacy policy">Privacy Policy</a>
-                    </p>
+                                        ))}
+                                    </HStack>
+                                </section>
+                            </VStack>
+                        </Box>
+                    </HStack>
+                    <Box className="footer-copyright" textAlign="center" pt="20px">
+                        <p>
+                            © 2023 Little Lemon Restaurant, LLC. All Rights Reserved
+                            <span class="footer-separator">|</span>
+                            <a href="/accessibility" title="our commitment to website accessibility">Accessibility</a>
+                            <span class="footer-separator">|</span>
+                            <a href="privacy-policy" title="our privacy policy">Privacy Policy</a>
+                        </p>
+                    </Box>
                 </Box>
             </Box>
         </footer>
