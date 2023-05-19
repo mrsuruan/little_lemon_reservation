@@ -90,7 +90,8 @@
 
 .footer-copyright {
     color: #EDEFEE;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
+    font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
 }
 
 .footer-copyright a {

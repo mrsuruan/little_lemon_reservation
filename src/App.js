@@ -1,3 +1,5 @@
+// App.js
+
 import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -6,11 +8,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Main/>
-      <Footer/>
-    </>
+    <div className="app-container">
+        <Header className="app-header" />
+        <Main className="app-main" />
+        <Footer className="app-footer" />
+    </div>
   );
 }
 

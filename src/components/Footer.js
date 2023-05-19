@@ -36,7 +36,7 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="">
+        <footer>
             <Box className="footer-container">
                 <Box pt ="20" pb="20" className="footer">
                     <div>

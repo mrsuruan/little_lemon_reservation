@@ -6,7 +6,7 @@ import { Box, HStack } from "@chakra-ui/react";
 
 const Header = () => {
     return (
-        <Box className="header-background">
+        <Box className="header-container">
             <header className="header" >
                 <nav className="navbar">
                     <a className="logo" href="/" title="Little Lemon Restaurant">
