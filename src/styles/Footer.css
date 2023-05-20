@@ -14,9 +14,6 @@
     grid-gap: 20px;
     max-width: 1280px;
     margin: 0 auto;
-    font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
     color: #EDEFEE;
     line-height: 1.5;
 }
@@ -49,6 +46,9 @@
 
 .footer-nav-links a {
     color: #EDEFEE;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .footer-nav-links a:hover {
@@ -88,10 +88,9 @@
     opacity: 0.4;
 }
 
-.footer-copyright {
+.footer-copyright p {
     color: #EDEFEE;
-    font-size: 0.80rem;
-    font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+    font-size: 0.85rem;
 }
 
 .footer-copyright a {

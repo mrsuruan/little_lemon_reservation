@@ -36,8 +36,7 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer>
-            <Box className="footer-container">
+        <footer className="footer-container">
                 <Box pt ="20" pb="20" className="footer">
                     <div>
                         <HStack>
@@ -173,7 +172,6 @@ const Footer = () => {
                         <a href="privacy-policy" title="our privacy policy">Privacy Policy</a>
                     </p>
                 </Box>
-            </Box>
         </footer>
     );
 };
