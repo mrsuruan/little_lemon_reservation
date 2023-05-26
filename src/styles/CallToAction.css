@@ -1,0 +1,40 @@
+/* CallToAction.css */
+
+* {
+    margin: 0;
+    padding:0;
+  }
+
+.callToAction-container {
+    background-color: #495E57;
+}
+
+.callToAction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #EDEFEE;
+    align-items: start;
+}
+
+.callToAction h1 {
+    color: #F4CE14;
+    margin-top: -30px;
+    margin-bottom: -10px;
+}
+
+.callToAction h2 {
+    margin-bottom: 20px;
+}
+
+.callToAction-text {
+    margin-bottom: 60px;
+    max-width: 320px;
+}
+
+.callToAction img {
+    border-radius: 16px;
+}

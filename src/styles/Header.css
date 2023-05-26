@@ -40,19 +40,18 @@
 .nav-links {
     list-style: none;
     display: flex;
-    margin: 0 20px;
+    /* margin: 0 auto; */
 }
 
-.nav-links li {
-    margin: 0 20px;
-}
 
-.nav-links a {
+
+.nav-item {
     color: #333333;
     text-decoration: none;
     font-family: 'Karla', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
+    /* margin: 0 auto; */
 }
 
 .nav-links a:hover {
