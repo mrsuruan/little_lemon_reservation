@@ -21,7 +21,7 @@ const Header = () => {
                         <Link to="/login" className="nav-item" title="Login to your account">Login</Link>
                     </HStack>
                     <Link to="/reservations">
-                        <button className="reserve-btn" aria-label="Reserve a Table">
+                        <button className="callToAction-btn" aria-label="Reserve a Table">
                             Reserve a Table
                         </button>
                     </Link>
