@@ -10,6 +10,8 @@ import Menu from './components/Menu.js'
 import Order from './components/Order.js'
 import About from './components/About.js'
 import Login from './components/Login.js'
+import Accessibility from "./components/Accessibility.js"
+import Privacy from "./components/Privacy.js"
 import { ChakraProvider } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 
@@ -24,8 +26,10 @@ function App() {
         <Route path="/order" element={<Order />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/accessibility" element={<Accessibility />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
       </Routes>
-        <Footer className="app-footer" />
+      <Footer className="app-footer" />
     </div>
   );
 }

@@ -1,8 +1,10 @@
 // Footer.js
 
+import "../styles/styles.css"
 import "../styles/Footer.css"
 import logo_2 from "../images/logo_2.png";
 import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
@@ -41,53 +43,39 @@ const Footer = () => {
                     <div>
                         <HStack>
                             <Box className="footer-logo">
-                                <a href="/" title="Little Lemon Restaurant">
+                                <Link to="/" title="Little Lemon Restaurant">
                                     <img
                                         src={logo_2}
-                                        style={{width: "50px"}}
+                                        style={{width: "65px"}}
                                         title="Little Lemon Restaurant"
                                         alt="Little Lemon footer logo"
                                     />
-                                </a>
+                                </Link>
                             </Box>
                         </HStack>
                     </div>
                     <div>
                         <nav>
-                            <VStack alignItems="left">
+                            <VStack className="footer-nav-links" alignItems="left">
                                 <h4 className="footer-header-sitemap">Sitemap</h4>
-                                <ul className="footer-nav-links">
-                                    <li>
-                                        <a href="/" title="home page">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/reservations" title="make a reservation">
-                                            Reservations
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/menu" title="restaurant menu">
-                                            Menu
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/order" title="order online">
-                                            Order
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/about" title="about Little Lemon Restaurant">
-                                            About
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/login" title="login to your account">
-                                            Login
-                                        </a>
-                                    </li>
-                                </ul>
+                                <Link to="/" title="Home page" alt="home page">
+                                    Home
+                                </Link>
+                                <Link to="/reservations" title="Make a reservation" alt="make a reservation">
+                                    Reservations
+                                </Link>
+                                <Link to="/menu" title="Restaurant menu" alt="restaurant menu">
+                                    Menu
+                                </Link>
+                                <Link to="/order" title="Order online" alt="order online">
+                                    Order
+                                </Link>
+                                <Link to="/about" title="About Little Lemon Restaurant" alt="about Little Lemon Restaurant">
+                                    About
+                                </Link>
+                                <Link to="/login" ttile="Login to your account" alt="login to your account">
+                                    Login
+                                </Link>
                             </VStack>
                         </nav>
                     </div>

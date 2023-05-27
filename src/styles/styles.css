@@ -39,3 +39,25 @@ p {
 /* img {
     border-radius: 16px;
 } */
+
+.callToAction-btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    background-color: #F4CE14;
+    color: #333333;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.callToAction-btn:hover {
+    background-color: #DDBB16;
+}
+
+.callToAction-btn:active {
+    background-color: #DDBB16;
+    color: #FFFFFF;
+}
