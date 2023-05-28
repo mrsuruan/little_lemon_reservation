@@ -2,9 +2,9 @@
 
 import "../styles/styles.css"
 import "../styles/Footer.css"
-import logo_2 from "../images/logo_2.png";
+import logo_footer from "../images/logo_footer.png";
 import { Box, HStack, VStack } from "@chakra-ui/react";
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
@@ -39,23 +39,20 @@ const socials = [
 const Footer = () => {
     return (
         <footer className="footer-container">
-                <Box pt ="20" pb="20" className="footer">
-                    <div>
-                        <HStack>
-                            <Box className="footer-logo">
-                                <Link to="/" title="Little Lemon Restaurant">
-                                    <img
-                                        src={logo_2}
-                                        style={{width: "65px"}}
-                                        title="Little Lemon Restaurant"
-                                        alt="Little Lemon footer logo"
-                                    />
-                                </Link>
-                            </Box>
-                        </HStack>
-                    </div>
-                    <div>
-                        <nav>
+                <Box className="footer">
+                    <Box className="footer-column">
+                        <Link to="/" title="Little Lemon Restaurant">
+                            <img
+                                className="footer-logo"
+                                src={logo_footer}
+                                style={{width: "65px"}}
+                                title="Little Lemon Restaurant"
+                                alt="Little Lemon footer logo"
+                            />
+                        </Link>
+                    </Box>
+                    <Box>
+                        <nav className="footer-column">
                             <VStack className="footer-nav-links" alignItems="left">
                                 <h4 className="footer-header-sitemap">Sitemap</h4>
                                 <Link to="/" title="Home page" alt="home page">
@@ -78,10 +75,10 @@ const Footer = () => {
                                 </Link>
                             </VStack>
                         </nav>
-                    </div>
-                    <div>
+                    </Box>
+                    <Box>
                         <Box>
-                            <VStack align="left">
+                            <VStack className="footer-column" align="left">
                                 <address className="footer-address">
                                     <h4 className="footer-header">
                                         Location
@@ -112,10 +109,10 @@ const Footer = () => {
                                 </section>
                             </VStack>
                         </Box>
-                        </div>
-                        <div>
+                        </Box>
+                        <Box>
                             <Box>
-                                <VStack align="left" >
+                                <VStack className="footer-column" align="left" >
                                     <section className="footer-contact">
                                         <h4 className="footer-header">
                                             Contact
@@ -149,9 +146,9 @@ const Footer = () => {
                                     </section>
                                 </VStack>
                             </Box>
-                        </div>
+                        </Box>
                 </Box>
-                <Box className="footer-copyright" textAlign="center" pt="20px" pb="20px">
+                <Box className="footer-copyright" >
                     <p>
                         © 2023 Little Lemon Restaurant, LLC. All Rights Reserved
                         <span class="footer-separator">|</span>

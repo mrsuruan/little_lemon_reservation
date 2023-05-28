@@ -13,7 +13,7 @@ function CallToAction() {
                     <Box className="callToAction-text">
                         <h1>Little Lemon</h1>
                         <h2>Chicago</h2>
-                        <h4>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h4>
+                        <h4>We are a family owned Mediterranean restaurant that focuses on traditional recipes served with a modern twist.</h4>
                     </Box>
                     <Link to="/reservations">
                         <button className="callToAction-btn" aria-label="Reserve a Table">
