@@ -30,6 +30,8 @@
 
 .specials button {
     margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .specials-cards {
@@ -47,7 +49,9 @@
     margin-bottom: 20px;
 }
 
-.specials img {
+.specials-card-img {
+    height: 200px;
+    width: 300px;
     border-radius: 16px 16px 0 0;
 }
 
@@ -55,10 +59,16 @@
     padding: 15px 20px;
 }
 
+.specials-card-price {
+    color: #EE9972;
+    float: right;
+}
+
 .specials-cards p {
-    padding: 5px 20px;
+    padding: 0px 20px;
     max-width: 260px;
-    height: 150px;
+    height: 190px;
+    color: #333333
 }
 
 .delivery-btn {
