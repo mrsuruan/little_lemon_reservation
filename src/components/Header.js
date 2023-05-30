@@ -1,31 +1,48 @@
 // Header.js
 
-import '../styles/Header.css'
+import '../styles/styles.css';
+import '../styles/Header.css';
 import logo_header from "../images/logo_header.png";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import {useState} from 'react';
 
 const Header = () => {
+
+    const [isNavbarOpen, setNavbarOpen] = useState(false);
+
+    const toggleNavbar = () => {
+        setNavbarOpen(!isNavbarOpen);
+    }
+
+    const closeNavbar = () => {
+        setNavbarOpen(false);
+    }
+
     return (
         <Box className="header-container">
             <header className="header" >
-                <nav className="navbar">
-                    <Link className="logo" to="/" title="Little Lemon Restaurant">
-                        <img src={logo_header} style={{width: "200px"}} title="Little Lemon Restaurant" alt="Little Lemon logo"/>
-                    </Link>
-                    <HStack className="nav-links" spacing={8}>
-                        <Link to="/" className="nav-item" title="Home page">Home</Link>
-                        <Link to="/menu" className="nav-item" title="Restaurant menu">Menu</Link>
-                        <Link to="/order" className="nav-item" title="Order online">Order</Link>
-                        <Link to="/about" className="nav-item" title="About Little Lemon Restaurant">About</Link>
-                        <Link to="/login" className="nav-item" title="Login to your account">Login</Link>
-                    </HStack>
-                    <Link to="/reservations">
-                        <button className="callToAction-btn" aria-label="Reserve a Table">
-                            Reserve a Table
-                        </button>
-                    </Link>
+
+                <Link className="logo" to="/" title="Little Lemon Restaurant">
+                    <img src={logo_header} style={{width: "180px"}} title="Little Lemon Restaurant" alt="Little Lemon logo"/>
+                </Link>
+
+                <nav className={`navbar ${isNavbarOpen ? 'responsive_nav' : ''}`} >
+                    <Link to="/" className="nav-item" onClick={closeNavbar} title="Home page">Home</Link>
+                    <Link to="/reservations" className="nav-item" onClick={closeNavbar} title="Reserve a table">Reservations</Link>
+                    <Link to="/menu" className="nav-item" onClick={closeNavbar} title="Restaurant menu">Menu</Link>
+                    <Link to="/order" className="nav-item" onClick={closeNavbar} title="Order online">Order</Link>
+                    <Link to="/about" className="nav-item" onClick={closeNavbar} title="About Little Lemon Restaurant">About</Link>
+                    <Link to="/login" className="nav-item" onClick={closeNavbar} title="Login to your account">Login</Link>
+                    <button className="nav-btn nav-close-btn" onClick={toggleNavbar} >
+                        <FaTimes />
+                    </button>
                 </nav>
+
+                <button className="nav-btn" onClick={toggleNavbar} >
+                    <FaBars />
+                </button>
             </header>
         </Box>
     );

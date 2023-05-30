@@ -5,12 +5,12 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Homepage from './components/Homepage';
-import Reservations from './components/Reservations.js'
-import Menu from './components/Menu.js'
-import Order from './components/Order.js'
-import About from './components/About.js'
-import Login from './components/Login.js'
-import Accessibility from "./components/Accessibility.js"
+import Reservations from './components/Reservations'
+import Menu from './components/Menu'
+import Order from './components/Order'
+import About from './components/About'
+import Login from './components/Login'
+import Accessibility from "./components/Accessibility"
 import Privacy from "./components/Privacy.js"
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
