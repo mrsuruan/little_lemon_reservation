@@ -1,76 +1,69 @@
-/* Specials.css */
+/* Testimonials.css */
 
 * {
     margin: 0;
     padding:0;
 }
 
-
-.specials-container {
-    background-color: #EDEFEE;
+.testimonials-container {
+    background-color: #FBDABB;
 }
 
-.specials {
+.testimonials {
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.specials h2 {
+.testimonials h2 {
     padding-top: 20px;;
     padding-bottom: 20px;
     margin-left: 20px;
 }
 
-.specials-title {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.specials button {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.specials-cards {
+.testimonials-cards {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
     margin-left: 20px;
 }
 
-.specials-card {
+.testimonials-card {
     border-radius: 16px;
     background-color: #FFFFFF;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-.specials-card-img {
-    height: 200px;
-    width: 300px;
-    border-radius: 16px 16px 0 0;
+.testimonials-card-img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.5rem auto;
 }
 
-.specials h4 {
-    padding: 15px 20px;
+.testimonials-card h4 {
+    padding-bottom: 20px;
+    text-align: center;
 }
 
-.specials-card-price {
-    color: #EE9972;
-    float: right;
+.testimonials-card-rating {
+    width: 120px;
+    margin: 0 auto;
 }
 
-.specials-cards p {
-    padding: 0px 20px;
-    max-width: 260px;
+.testimonials-cards p {
+    padding: 20px 20px;
+    max-width: 300px;
     height: 190px;
     color: #333333
 }
 
-.delivery-btn {
+
+
+
+
+/* .delivery-btn {
     border: none;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -101,6 +94,6 @@
     position: absolute;
     right:20px;
     top: 10px;
-}
+} */
 
 
