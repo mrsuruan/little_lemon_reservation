@@ -5,7 +5,7 @@ import '../styles/Header.css';
 import logo_header from "../images/logo_header.png";
 import { Box } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { HiMenu, HiOutlineShoppingBag, HiX } from 'react-icons/hi';
 import {useState} from 'react';
 
 const Header = () => {
@@ -14,20 +14,18 @@ const Header = () => {
 
     const toggleNavbar = () => {
         setNavbarOpen(!isNavbarOpen);
-    }
+    };
 
     const closeNavbar = () => {
         setNavbarOpen(false);
-    }
+    };
 
     return (
         <Box className="header-container">
             <header className="header" >
-
-                <Link className="logo" to="/" title="Little Lemon Restaurant">
+                <Link id="logo" to="/" title="Little Lemon Restaurant">
                     <img src={logo_header} style={{width: "180px"}} title="Little Lemon Restaurant" alt="Little Lemon logo"/>
                 </Link>
-
                 <nav className={`navbar ${isNavbarOpen ? 'responsive_nav' : ''}`} >
                     <Link to="/" className="nav-item" onClick={closeNavbar} title="Home page">Home</Link>
                     <Link to="/reservations" className="nav-item" onClick={closeNavbar} title="Reserve a table">Reservations</Link>
@@ -36,12 +34,16 @@ const Header = () => {
                     <Link to="/about" className="nav-item" onClick={closeNavbar} title="About Little Lemon Restaurant">About</Link>
                     <Link to="/login" className="nav-item" onClick={closeNavbar} title="Login to your account">Login</Link>
                     <button className="nav-btn nav-close-btn" onClick={toggleNavbar} >
-                        <FaTimes />
+                        <HiX />
                     </button>
                 </nav>
-
+                <Link to="/basket" title="Your shopping basket">
+                    <button className="nav-btn shopping-basket-icon" >
+                        < HiOutlineShoppingBag />
+                    </button>
+                </Link>
                 <button className="nav-btn" onClick={toggleNavbar} >
-                    <FaBars />
+                    <HiMenu />
                 </button>
             </header>
         </Box>
