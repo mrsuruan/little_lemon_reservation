@@ -1,0 +1,39 @@
+/* Reservations.css */
+
+* {
+    margin: 0;
+    padding:0;
+  }
+
+.reservations-container {
+    background-color: #EDEFEE;
+}
+
+.reservations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #EDEFEE;
+    align-items: start;
+}
+
+.reservations h2 {
+    color: #333333;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* .reservations-text {
+    margin-bottom: 60px;
+    max-width:  300px;
+    margin-left: 20px;
+} */
+
+.reservations button {
+    margin-top: 40px;
+    margin-right: 20px;
+}

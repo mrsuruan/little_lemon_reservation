@@ -6,7 +6,7 @@ import logo_header from "../images/logo_header.png";
 import { Box } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import { HiMenu, HiOutlineShoppingBag, HiX } from 'react-icons/hi';
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Header = () => {
 
@@ -23,7 +23,7 @@ const Header = () => {
     return (
         <Box className="header-container">
             <header className="header" >
-                <Link id="logo" to="/" title="Little Lemon Restaurant">
+                <Link className="logo" to="/" title="Little Lemon Restaurant">
                     <img src={logo_header} style={{width: "180px"}} title="Little Lemon Restaurant" alt="Little Lemon logo"/>
                 </Link>
                 <nav className={`navbar ${isNavbarOpen ? 'responsive_nav' : ''}`} >
@@ -32,6 +32,7 @@ const Header = () => {
                     <Link to="/menu" className="nav-item" onClick={closeNavbar} title="Restaurant menu">Menu</Link>
                     <Link to="/order" className="nav-item" onClick={closeNavbar} title="Order online">Order</Link>
                     <Link to="/about" className="nav-item" onClick={closeNavbar} title="About Little Lemon Restaurant">About</Link>
+                    {/* <Link to="/about" className="nav-item" onClick={closeNavbar} title="About Little Lemon Restaurant" smooth={true} duration={500}>About</Link> */}
                     <Link to="/login" className="nav-item" onClick={closeNavbar} title="Login to your account">Login</Link>
                     <button className="nav-btn nav-close-btn" onClick={toggleNavbar} >
                         <HiX />

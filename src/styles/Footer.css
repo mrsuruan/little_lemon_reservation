@@ -43,6 +43,10 @@
     color: #F4CE14;
 }
 
+.footer-nav-links {
+    margin-bottom: 20px;
+}
+
 .footer-nav-links a {
     color: #EDEFEE;
     font-family: 'Karla', Arial, Helvetica, sans-serif;
