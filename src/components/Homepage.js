@@ -1,9 +1,12 @@
-// import Header from "./Header.js"
-import CallToAction from "./CallToAction.js"
-import Specials from './Specials.js'
+// Homepage.js
+
+import CallToAction from "./CallToAction";
+import Specials from './Specials';
 import Testimonials from './Testimonials';
-import { Box, HStack, VStack } from "@chakra-ui/react";
-// import Footer from "./Footer.js"
+import OurStory from './OurStory';
+import { Box } from "@chakra-ui/react";
+// import { Link } from 'react-router-dom';
+// import { Element } from 'react-scroll';
 
 function Homepage() {
     return (
@@ -11,6 +14,9 @@ function Homepage() {
             <CallToAction />
             <Specials />
             <Testimonials />
+            {/* <Element name="about" className="element"> */}
+            <OurStory />
+            {/* </Element> */}
         </Box>
     )
 }

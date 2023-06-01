@@ -1,0 +1,39 @@
+/* OurStory.css */
+
+* {
+    margin: 0;
+    padding:0;
+  }
+
+.ourStory-container {
+    background-color: #EDEFEE;
+}
+
+.ourStory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ourStory-text {
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    max-width:  350px;
+}
+
+.ourStory h2 {
+    margin-bottom: 20px;
+}
+
+.ourStory img {
+    border-radius: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

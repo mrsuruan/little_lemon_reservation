@@ -2,7 +2,7 @@
 
 const Basket = () => {
     return (
-        <h2>Your Shopping Basket</h2>
+        <h2>Your Basket</h2>
     )
 }
 
