@@ -126,7 +126,7 @@ header .nav-btn.shopping-basket-icon {
         gap: 1rem;
         background-color: #EDEFEE;
         transition: 1s;
-        transform: translateY(-100vh);
+        transform: translateY(-200vh);
     }
 
     header .navbar.responsive_nav {
@@ -139,7 +139,12 @@ header .nav-btn.shopping-basket-icon {
         right: 1.2rem;
     }
 
-    header .nav-btn.shopping-basket-icon {
+    /* header .nav-btn.shopping-basket-icon {
         margin-left: 16rem;
-    }
+    } */
+}
+
+#header-icons {
+    display: flex;
+    
 }
