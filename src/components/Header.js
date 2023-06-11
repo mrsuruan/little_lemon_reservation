@@ -38,14 +38,16 @@ const Header = () => {
                         <HiX />
                     </button>
                 </nav>
-                <Link to="/basket" title="Your shopping basket">
-                    <button className="nav-btn shopping-basket-icon" >
-                        < HiOutlineShoppingBag />
+                <div id="header-icons">
+                    <Link to="/basket" title="Your shopping basket">
+                        <button className="nav-btn shopping-basket-icon" >
+                            < HiOutlineShoppingBag />
+                        </button>
+                    </Link>
+                    <button className="nav-btn" onClick={toggleNavbar} >
+                        <HiMenu />
                     </button>
-                </Link>
-                <button className="nav-btn" onClick={toggleNavbar} >
-                    <HiMenu />
-                </button>
+                </div>
             </header>
         </Box>
     );

@@ -31,9 +31,18 @@
 }
 
 .ourStory img {
+    width: 600px;
+    max-width: 100%;
     border-radius: 16px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .ourStory img {
+        width: 100%;
+        margin: 20px;
+    }
 }

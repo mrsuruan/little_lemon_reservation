@@ -35,15 +35,26 @@
     margin-left: 20px;
 }
 
+.callToAction button {
+    margin-left: 20px;
+}
+
 .callToAction img {
+    width: 600px;
+    max-width: 100%;
     border-radius: 16px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
     margin-left: 20px;
-    
 }
 
-.callToAction button {
-    margin-left: 20px;
+@media screen and (max-width: 600px) {
+    .callToAction img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }

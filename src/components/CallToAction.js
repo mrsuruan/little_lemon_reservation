@@ -21,7 +21,7 @@ function CallToAction() {
                         </button>
                     </Link>
                 </Box>
-                <img src={mario_adrian_1} style={{width: "600px"}} title="Brothers Mario and Adrian" alt="brothers Mario and Adrian"/>
+                <img src={mario_adrian_1} title="Brothers Mario and Adrian" alt="brothers Mario and Adrian"/>
             </Box>
         </Box>
     )
