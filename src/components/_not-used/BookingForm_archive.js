@@ -6,14 +6,15 @@ import { useState } from 'react';
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = ({ availableTimes, onDateChange }) => {
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedTime, setSelectedTime] = useState('7:00 PM');
     const [numberOfGuests, setNumberOfGuests] = useState('2 People');
 
     const handleDateChange = (event) => {
-        setSelectedDate(event.target.value);
-    };
+        const selectedDate = event.target.value;
+        onDateChange(selectedDate);
+      };
 
     const handleTimeChange = (event) => {
         setSelectedTime(event.target.value);
@@ -89,6 +90,10 @@ export default BookingForm;
 
 
 
+
+    // const handleDateChange = (event) => {
+    //     setSelectedDate(event.target.value);
+    // };
 
                 {/* <input type="submit" defaultValue="Make Your reservation" /> */}
 

@@ -8,7 +8,6 @@ import Homepage from './components/Homepage';
 import Reservations from './components/Reservations';
 import Menu from './components/Menu';
 import Order from './components/Order';
-// import About from './components/About';
 import OurStory from './components/OurStory';
 import Login from './components/Login';
 import Basket from './components/Basket';
@@ -16,15 +15,8 @@ import Accessibility from "./components/Accessibility";
 import Privacy from "./components/Privacy.js";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { Routes, Route, link } from "react-router-dom";
-// import { animateScroll as scroll } from 'react-scroll';
-// import { useEffect } from 'react';
-
 
 const App = () => {
-
-  // useEffect (() => {
-  //   scroll.scrollToTop();
-  // }, []);
 
   return (
     <ChakraProvider>
