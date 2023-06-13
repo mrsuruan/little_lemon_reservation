@@ -2,13 +2,16 @@
 
 import "../styles/styles.css"
 import "../styles/BookingForm.css"
-import { useState } from 'react';
+import { useState, useReducer } from 'react';
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 
 const BookingForm = ({ availableTimes }) => {
+
     const [selectedDate, setSelectedDate] = useState('');
+
     const [selectedTime, setSelectedTime] = useState('7:00 PM');
+
     const [numberOfGuests, setNumberOfGuests] = useState('2 People');
 
     const handleDateChange = (event) => {
@@ -17,7 +20,7 @@ const BookingForm = ({ availableTimes }) => {
 
     const handleTimeChange = (event) => {
         setSelectedTime(event.target.value);
-    };
+    }
 
     const handleGuestsChange = (event) => {
         setNumberOfGuests(event.target.value);
@@ -88,6 +91,24 @@ export default BookingForm;
 
 
 
+
+
+
+// const selectedTimeReducer = (state, action) => {
+//     switch (action.type) {
+//         case 'SET_SELECTED_TIME':
+//             return action.payload;
+//         default:
+//             return state;
+//     }
+// };
+
+    // const [selectedTime, setSelectedTime] = useReducer(selectedTimeReducer, '7:00 PM');
+
+
+    // const handleTimeChange = (event) => {
+    //     setSelectedTime({ type: 'SET_SELECTED_TIME', payload: event.target.value });
+    // };
 
 
                 {/* <input type="submit" defaultValue="Make Your reservation" /> */}

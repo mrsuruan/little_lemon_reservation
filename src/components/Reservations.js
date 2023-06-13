@@ -5,11 +5,20 @@ import "../styles/Reservations.css";
 import BookingForm from './BookingForm';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Box, HStack, VStack } from "@chakra-ui/react";
-import { useState } from 'react';
+import { useState, useReducer } from 'react';
+
+const availableTimesReducer = (state, action) => {
+    switch (action.type) {
+        case 'SET_AVAILABLE_TIMES':
+            return action.payload;
+        default:
+            return state;
+    }
+};
 
 const Reservations = () => {
 
-    const [availableTimes] = useState([
+    const [availableTimes, dispatch] = useReducer(availableTimesReducer, [
         '5:00 PM',
         '5:30 PM',
         '6:00 PM',
@@ -27,7 +36,7 @@ const Reservations = () => {
         <Box className="reservations-container">
             <Box className="reservations">
                 <h2>Make a Reservation</h2>
-                < BookingForm availableTimes={availableTimes} />
+                <BookingForm dispatch={dispatch} availableTimes={availableTimes} />
             </Box>
         </Box>
     )
