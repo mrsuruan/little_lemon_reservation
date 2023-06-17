@@ -111,12 +111,3 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
 }
 
 export default BookingForm;
-
-
-
-
-
-
-
-
-              
