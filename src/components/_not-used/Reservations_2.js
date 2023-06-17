@@ -40,14 +40,23 @@ const Reservations = () => {
 
     const [availableTimes, dispatch] = useReducer(availableTimesReducer, initializeTimes());
 
+    const [selectedDate, setSelectedDate] = useState('');
+
+    const handleDateChange = (event) => {
+        const date = event.target.value;
+        setSelectedDate(date);
+        const updatedTimes = updateTimes(date);
+        dispatch({ type: 'SET_AVAILABLE_TIMES', payload: updatedTimes });
+    };
+
     return (
         <Box className="reservations-container">
             <Box className="reservations">
                 <h2>Make a Reservation</h2>
-                <BookingForm 
-                    dispatch={dispatch} 
+                <BookingForm
+                    selectedDate={selectedDate}
+                    handleDateChange={handleDateChange}
                     availableTimes={availableTimes}
-                    updateTimes={updateTimes}
                 />
             </Box>
         </Box>
@@ -57,3 +66,8 @@ const Reservations = () => {
 export default Reservations;
 
 
+
+
+// const updateTimes = (selectedDate) => {
+//     return availableTimes;
+// }

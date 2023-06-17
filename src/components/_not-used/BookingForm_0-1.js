@@ -2,38 +2,26 @@
 
 import "../styles/styles.css"
 import "../styles/BookingForm.css"
-import { useState, useReducer } from 'react';
+import { useState } from 'react';
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 
-const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
-
+const BookingForm = ({ availableTimes }) => {
     const [selectedDate, setSelectedDate] = useState('');
-
     const [selectedTime, setSelectedTime] = useState('7:00 PM');
-
     const [numberOfGuests, setNumberOfGuests] = useState('2 People');
 
-    const [selectedOccasion, setSelectedOccasion] = useState('Birthday');
-
     const handleDateChange = (event) => {
-        const selectedDate = event.target.value;
-        const updatedTimes = updateTimes(selectedDate);
-        dispatch({ type: 'SET_AVAILABLE_TIMES', payload: updatedTimes });
-        setSelectedDate(selectedDate);
+        setSelectedDate(event.target.value);
     };
 
     const handleTimeChange = (event) => {
         setSelectedTime(event.target.value);
-    }
+    };
 
     const handleGuestsChange = (event) => {
         setNumberOfGuests(event.target.value);
     };
-
-    const handleOccasionChange = (event) => {
-        setSelectedOccasion(event.target.value);
-    }
 
     const navigate = useNavigate();
 
@@ -88,20 +76,6 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
                         ))}
                     </select>
                 </Box>
-                <Box className="booking-field">
-                    <label htmlFor="book-occasion">Occasion</label>
-                    <select
-                        id="book-occasion"
-                        value={selectedOccasion}
-                        onChange={handleOccasionChange}
-                    >
-                        <option>Birthday</option>
-                        <option>Anniversary</option>
-                        <option>Date</option>
-                        <option>Special Occasion</option>
-                        <option>Business Meal</option>
-                    </select>
-                </Box>
             </Box>
             <button type="submit" className="callToAction-btn" aria-label="Find a Table">
                 Find a Table
@@ -116,7 +90,12 @@ export default BookingForm;
 
 
 
+                {/* <input type="submit" defaultValue="Make Your reservation" /> */}
 
+                {/* <input type="number" placeholder={2} min={1} max={10} id="book-guests" /> */}
 
-
-              
+                {/* <label htmlFor="occasion">Occasion</label>
+                <select id="occasion">
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                </select> */}

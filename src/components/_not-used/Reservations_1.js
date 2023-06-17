@@ -57,3 +57,8 @@ const Reservations = () => {
 export default Reservations;
 
 
+
+
+// const updateTimes = (selectedDate) => {
+//     return availableTimes;
+// }
