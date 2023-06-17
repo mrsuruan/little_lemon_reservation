@@ -16,7 +16,7 @@ const availableTimesReducer = (state, action) => {
     }
 };
 
-const initializeTimes = () => {
+export const initializeTimes = () => {
     return [
         '5:00 PM',
         '5:30 PM',
@@ -32,7 +32,7 @@ const initializeTimes = () => {
     ];
 };
 
-const updateTimes = (selectedDate) => {
+export const updateTimes = (selectedDate) => {
     return initializeTimes();
 };
 
