@@ -18,7 +18,7 @@ const availableTimesReducer = (state, action) => {
     }
 };
 
-const initializeTimes = (selectedDate) => {
+export const initializeTimes = () => {
     return [
         '5:00 PM',
         '5:30 PM',
@@ -41,7 +41,7 @@ const updateTimes = (selectedDate) => {
 const Reservations = () => {
 
     const [availableTimes, dispatch] = useReducer(availableTimesReducer, initializeTimes());
-console.log(availableTimes);
+
     return (
         <Box className="reservations-container">
             <Box className="reservations">
