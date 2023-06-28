@@ -35,14 +35,14 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
         setSelectedOccasion(event.target.value);
     }
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        navigate('/');
+        // navigate('/');
     };
-
+    console.log('here', availableTimes);
     return (
         <form className="booking-form" onSubmit={handleSubmit}>
             <Box className="booking-fields">
@@ -83,7 +83,7 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
                         value={selectedTime}
                         onChange={handleTimeChange}
                     >
-                        {availableTimes.map((time) => (
+                        { availableTimes && availableTimes.map((time) => (
                             <option key={time}>{time}</option>
                         ))}
                     </select>
