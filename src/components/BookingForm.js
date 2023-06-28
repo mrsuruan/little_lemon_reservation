@@ -42,7 +42,7 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
 
         // navigate('/');
     };
-    console.log('here', availableTimes);
+   
     return (
         <form className="booking-form" onSubmit={handleSubmit}>
             <Box className="booking-fields">
