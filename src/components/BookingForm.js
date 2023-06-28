@@ -82,7 +82,7 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
                         value={selectedTime}
                         onChange={handleTimeChange}
                     >
-                        {availableTimes.map((time) => (
+                        { availableTimes && availableTimes.map((time) => (
                             <option key={time}>{time}</option>
                         ))}
                     </select>

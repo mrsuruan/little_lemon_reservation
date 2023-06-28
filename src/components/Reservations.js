@@ -5,7 +5,9 @@ import "../styles/Reservations.css";
 import BookingForm from './BookingForm';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Box, HStack, VStack } from "@chakra-ui/react";
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
+// import { fetchAPI } from 'https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js';
+
 
 const availableTimesReducer = (state, action) => {
     switch (action.type) {
@@ -44,8 +46,8 @@ const Reservations = () => {
         <Box className="reservations-container">
             <Box className="reservations">
                 <h2>Make a Reservation</h2>
-                <BookingForm 
-                    dispatch={dispatch} 
+                <BookingForm
+                    dispatch={dispatch}
                     availableTimes={availableTimes}
                     updateTimes={updateTimes}
                 />
