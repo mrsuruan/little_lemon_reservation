@@ -35,14 +35,14 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
         setSelectedOccasion(event.target.value);
     }
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // navigate('/');
+        navigate('/');
     };
-   
+
     return (
         <form className="booking-form" onSubmit={handleSubmit}>
             <Box className="booking-fields">
