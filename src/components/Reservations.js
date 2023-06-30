@@ -21,12 +21,13 @@ const initializeTimes = () => {
 	const availableTimes = window.fetchAPI(today);
 	console.log(availableTimes);
 	return availableTimes;
-}
+};
 
-const updateTimes = async (selectedDate) => {
+export const updateTimes = async (selectedDate) => {
 	// const availableTimes = await fetchAPI(selectedDate);
 	// return availableTimes;
-}
+	return  initializeTimes
+};
 
 const Reservations = () => {
 
