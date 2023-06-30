@@ -35,12 +35,11 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
         setSelectedOccasion(event.target.value);
     }
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        navigate('/');
+        // navigate('/');
     };
 
     return (
@@ -89,7 +88,7 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes }) => {
                     </select>
                 </Box>
                 <Box className="booking-field">
-                    <label htmlFor="book-occasion">Occasion</label>
+                    <label htmlFor="book-occasion">Occasion (optional)</label>
                     <select
                         id="book-occasion"
                         value={selectedOccasion}
