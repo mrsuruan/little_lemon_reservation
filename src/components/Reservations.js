@@ -24,7 +24,7 @@ const initializeTimes = () => {
 };
 
 export const updateTimes = (selectedDate) => {
-	return initializeTimes();
+		return initializeTimes();
 };
 
 const Reservations = () => {
