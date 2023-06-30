@@ -23,10 +23,8 @@ const initializeTimes = () => {
 	return availableTimes;
 };
 
-export const updateTimes = async (selectedDate) => {
-	// const availableTimes = await fetchAPI(selectedDate);
-	// return availableTimes;
-	return  initializeTimes();
+export const updateTimes = (selectedDate) => {
+	return initializeTimes();
 };
 
 const Reservations = () => {
@@ -52,3 +50,10 @@ const Reservations = () => {
 }
 
 export default Reservations;
+
+
+// export const updateTimes = async (selectedDate) => {
+// 	const availableTimes = await fetchAPI(selectedDate);
+// 	return availableTimes;
+// 	return  initializeTimes();
+// };
