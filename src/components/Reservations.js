@@ -3,7 +3,7 @@
 import "../styles/styles.css";
 import "../styles/Reservations.css";
 import BookingForm from './BookingForm';
-import { Routes, Route, Link } from 'react-router-dom';
+import { useNavigate, Routes, Route, Link } from 'react-router-dom';
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import { useState, useReducer, useEffect } from 'react';
 
@@ -23,17 +23,21 @@ const initializeTimes = () => {
 	return availableTimes;
 };
 
-export const updateTimes = (selectedDate) => {
-	return initializeTimes();
+const updateTimes = (selectedDate) => {
+	const availableTimes = window.fetchAPI(new Date(selectedDate));
+	return availableTimes;
 };
 
 const Reservations = () => {
-
-	useEffect(() => {
-
-	}, [])
-
 	const [availableTimes, dispatch] = useReducer(availableTimesReducer, initializeTimes());
+	const navigate = useNavigate();
+
+	const submitForm = (formData) => {
+		const success = window.submitAPI(formData);
+		if (success) {
+			navigate('/booking-confirmation');
+		}
+	};
 
 	return (
 		<Box className="reservations-container">
@@ -43,6 +47,7 @@ const Reservations = () => {
 					dispatch={dispatch}
 					availableTimes={availableTimes}
 					updateTimes={updateTimes}
+					submitForm={submitForm}
 				/>
 			</Box>
 		</Box>
@@ -57,3 +62,7 @@ export default Reservations;
 // 	return availableTimes;
 // 	return  initializeTimes();
 // };
+
+// useEffect(() => {
+
+// }, [])
