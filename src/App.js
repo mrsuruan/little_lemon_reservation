@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Homepage from './components/Homepage';
 import Reservations from './components/Reservations';
+import ConfirmedBooking from './components/ConfirmedBooking';
 import Menu from './components/Menu';
 import Order from './components/Order';
 import OurStory from './components/OurStory';
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/reservations" element={<Reservations />} />
+          <Route path="/booking-confirmation" element={<ConfirmedBooking />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/order" element={<Order />} />
           <Route path="/about" element={<OurStory />} />
