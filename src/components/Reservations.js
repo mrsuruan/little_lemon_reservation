@@ -16,29 +16,20 @@ const availableTimesReducer = (state, action) => {
     }
 };
 
-export const initializeTimes = async (selectedDate) => {
-	const availableTimes = await window.fetchAPI(selectedDate);
+const initializeTimes = () => {
+	const today = new Date();
+	const availableTimes = window.fetchAPI(today);
 	console.log(availableTimes);
 	return availableTimes;
 };
 
-export const updateTimes = (selectedDate) => {
+const updateTimes = (selectedDate) => {
 	const availableTimes = window.fetchAPI(new Date(selectedDate));
 	return availableTimes;
 };
 
 const Reservations = () => {
-	const [availableTimes, dispatch] = useReducer(availableTimesReducer, []);
-
-	useEffect(() => {
-		const fetchAvailableTimes = async () => {
-			const today = new Date();
-			const times = await initializeTimes(today);
-			dispatch({ type: `SET_AVAILABLE_TIMES`, payload: times });
-		};
-		fetchAvailableTimes();
-	}, []);
-
+	const [availableTimes, dispatch] = useReducer(availableTimesReducer, initializeTimes());
 	const navigate = useNavigate();
 
 	const submitForm = (formData) => {
@@ -64,3 +55,14 @@ const Reservations = () => {
 }
 
 export default Reservations;
+
+
+// export const updateTimes = async (selectedDate) => {
+// 	const availableTimes = await fetchAPI(selectedDate);
+// 	return availableTimes;
+// 	return  initializeTimes();
+// };
+
+// useEffect(() => {
+
+// }, [])
