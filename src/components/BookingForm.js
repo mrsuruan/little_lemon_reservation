@@ -5,11 +5,19 @@ import "../styles/BookingForm.css"
 import { useState, useReducer } from 'react';
 import { Box, HStack, VStack } from "@chakra-ui/react";
 
+const convertToAmericanTime = (time) => {
+	const [hour, minutes] = time.split(':');
+	const parseHour = parseInt(hour, 10);
+	let displayHour = parseHour % 12 || 12;
+	const period = parseHour >= 12 ? 'PM' : 'AM';
+	return `${displayHour}:${minutes} ${period}`;
+};
+
 const BookingForm = ({ dispatch, availableTimes, updateTimes, submitForm }) => {
 	const [selectedDate, setSelectedDate] = useState('');
 	const [selectedTime, setSelectedTime] = useState('');
 	const [numberOfGuests, setNumberOfGuests] = useState('2 People');
-	const [selectedOccasion, setSelectedOccasion] = useState('Birthday');
+	const [selectedOccasion, setSelectedOccasion] = useState('-');
 	const [errorMessage, setErrorMessage] = useState('');
 
 	const handleDateChange = (event) => {
@@ -48,6 +56,15 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes, submitForm }) => {
 		}
 	};
 
+	const formattedTimes = availableTimes.map((time) => {
+		const formattedTime = convertToAmericanTime(time);
+		return (
+			<option key={time} value={time}>
+				{formattedTime}
+			</option>
+		)
+	})
+
 	return (
 		<form className="booking-form" onSubmit={handleSubmit}>
 			<Box className="booking-fields">
@@ -57,6 +74,7 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes, submitForm }) => {
 						id='book-guests'
 						value={numberOfGuests}
 						onChange={handleGuestsChange}
+						required
 					>
 						<option>1 Person</option>
 						<option>2 People</option>
@@ -79,6 +97,8 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes, submitForm }) => {
 						id="book-date"
 						value={selectedDate}
 						onChange={handleDateChange}
+						required
+						min={new Date().toISOString().split('T')[0]}
 					/>
 				</Box>
 				<Box className="booking-field">
@@ -87,19 +107,19 @@ const BookingForm = ({ dispatch, availableTimes, updateTimes, submitForm }) => {
 						id="book-time"
 						value={selectedTime}
 						onChange={handleTimeChange}
+						required
 					>
-						{ availableTimes && availableTimes.map((time) => (
-							<option key={time}>{time}</option>
-						))}
+						{formattedTimes}
 					</select>
 				</Box>
 				<Box className="booking-field">
-					<label htmlFor="book-occasion">Occasion</label>
+					<label htmlFor="book-occasion">Occasion (optional)</label>
 					<select
 						id="book-occasion"
 						value={selectedOccasion}
 						onChange={handleOccasionChange}
 					>
+						<option>-</option>
 						<option>Birthday</option>
 						<option>Anniversary</option>
 						<option>Date</option>
